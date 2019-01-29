@@ -7,10 +7,10 @@ export const getTabUrl = async () => {
 	const useParticipating = onlyParticipating ? '/participating' : '';
 
 	if (/(^(https:\/\/)?(api\.)?github\.com)/.test(rootUrl)) {
-		return `https://github.com/notifications${useParticipating}`;
+		return `https://github.com/notifications${useParticipating}?all=1`;
 	}
 
-	return `${rootUrl}notifications${useParticipating}`;
+	return `${rootUrl}notifications${useParticipating}?all=1`;
 };
 
 export const getApiUrl = async () => {
